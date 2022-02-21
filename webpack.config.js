@@ -6,7 +6,7 @@ const share = mf.share;
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, 'tsconfig.json'),
-  [/* mapped paths to share */]);
+  ["my-authenticator-lib"]);
 
 module.exports = {
   output: {
@@ -46,7 +46,7 @@ module.exports = {
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-
+          "my-authenticator-lib": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           ...sharedMappings.getDescriptors()
         })
         
