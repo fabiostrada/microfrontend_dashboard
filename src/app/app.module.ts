@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthenticatorModule } from 'my-authenticator-lib';
 
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthenticatorModule
+    AuthenticatorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

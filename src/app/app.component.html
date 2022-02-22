@@ -1,3 +1,8 @@
 <h2>Container Dashboard Application</h2>
 <p *ngIf="!!property1">Valore della properietà 1 aggiornata nel modulo di admin(account): {{!!property1 ? property1:'empty'}}</p>
+<select name="language-select" [(ngModel)]="language" (change)="selectLanguage()">
+    <option [value]="undefined">Seleziona</option>
+    <option [value]="languageConfig.IT">Italiano</option>
+    <option [value]="languageConfig.EN">Inglese</option>      
+  </select>
 <router-outlet></router-outlet>
